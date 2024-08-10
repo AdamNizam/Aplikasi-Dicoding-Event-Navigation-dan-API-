@@ -1,5 +1,7 @@
 package com.example.aplikasidicodingevent.data.retrofit
 
+import com.example.aplikasidicodingevent.data.response.BaseResponse
+import com.example.aplikasidicodingevent.data.response.DetailEventResponse
 import com.example.aplikasidicodingevent.data.response.ListEventsResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -14,6 +16,6 @@ interface ApiService {
 
     @GET("events/{id}")
     fun getDetailEvent(
-        @Path("id") id: String): Call<ListEventsResponse>
+        @Path("id") id: String): Call<BaseResponse>
 }
 

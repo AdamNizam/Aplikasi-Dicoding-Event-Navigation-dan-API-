@@ -1,5 +1,7 @@
 package com.example.aplikasidicodingevent.ui.adapter
 
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.aplikasidicodingevent.data.response.ListEventsItem
 import com.example.aplikasidicodingevent.databinding.ItemListEventsBinding
+import com.example.aplikasidicodingevent.ui.detailevent.DetailEventActivity
 
 class ListEventsAdapter: ListAdapter<ListEventsItem, ListEventsAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
@@ -27,6 +30,12 @@ class ListEventsAdapter: ListAdapter<ListEventsItem, ListEventsAdapter.MyViewHol
             Glide.with(binding.imageView.context)
                 .load(event.imageLogo)
                 .into(binding.imageView)
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailEventActivity::class.java)
+                Log.e("kirimdata","erro ${event.id}")
+                intent.putExtra(DetailEventActivity.EXTRA_EVENT_ID, event.id)
+                itemView.context.startActivity(intent)
+            }
         }
     }
     companion object {
