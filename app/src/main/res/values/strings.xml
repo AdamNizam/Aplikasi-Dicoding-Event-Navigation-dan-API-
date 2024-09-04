@@ -8,4 +8,6 @@
     <string name="finished">Finished</string>
     <string name="up_coming">Up Coming</string>
     <string name="buka_link">Buka Link</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
 </resources>
