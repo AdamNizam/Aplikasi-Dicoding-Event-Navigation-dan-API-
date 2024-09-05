@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+        <!-- Gambar utama -->
         <ImageView
             android:id="@+id/imgCover"
             android:layout_width="0dp"
@@ -18,6 +19,23 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Bookmark ImageView -->
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/circle_background"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:src="@drawable/baseline_favorite_border_24"
+            android:contentDescription="@string/save_favorite"
+            android:tag="Not Saved"
+            app:layout_constraintBottom_toBottomOf="@id/imgCover"
+            app:layout_constraintEnd_toEndOf="@id/imgCover" />
+
 
         <TextView
             android:id="@+id/tvEventName"
@@ -52,7 +70,7 @@
             android:id="@+id/btnLink"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Clik Me"
+            android:text="@string/register"
             app:layout_constraintTop_toBottomOf="@id/tvDescription"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

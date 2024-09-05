@@ -21,4 +21,14 @@
         android:name="com.example.aplikasidicodingevent.ui.finished.FinishedFragment"
         android:label="Event Finished"
         tools:layout="@layout/fragment_finished" />
+    <fragment
+        android:id="@+id/navigation_favorit"
+        android:name="com.example.aplikasidicodingevent.ui.favorit.FavoritFragment"
+        android:label="favorit"
+        tools:layout="@layout/fragment_favorit" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.aplikasidicodingevent.ui.settings.SettingsFragment"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

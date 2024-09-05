@@ -10,4 +10,8 @@
     <string name="buka_link">Buka Link</string>
     <string name="favorite">Favorite</string>
     <string name="settings">Settings</string>
+    <string name="halaman_settings">halaman Settings</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="save_favorite">save favorite</string>
+    <string name="register">Register</string>
 </resources>

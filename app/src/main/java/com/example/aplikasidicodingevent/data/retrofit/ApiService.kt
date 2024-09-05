@@ -17,5 +17,11 @@ interface ApiService {
     @GET("events/{id}")
     fun getDetailEvent(
         @Path("id") id: String): Call<BaseResponse>
+
+    @GET("events")
+    fun getEventLimits(
+        @Query("active") active: Int = -1,
+        @Query("limit") limit: Int = 1
+    ): Call<ListEventsResponse>
 }
 

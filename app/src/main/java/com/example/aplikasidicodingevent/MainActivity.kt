@@ -44,58 +44,12 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_upcoming,
-                R.id.navigation_finished
+                R.id.navigation_finished,
+                R.id.navigation_favorit,
+                R.id.navigation_settings
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-//
-//        supportActionBar?.hide()
-//
-//        val layoutManager = LinearLayoutManager(this)
-//        binding.rvHeroes.layoutManager = layoutManager
-//        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
-//        binding.rvHeroes.addItemDecoration(itemDecoration)
-//
-//        findEvents()
-
     }
-//
-//    private fun findEvents() {
-//        showLoading(true)
-//        val client = ApiConfig.getApiService().getEvents(ListEvents_ID)
-//        client.enqueue(object : Callback<ListEventsResponse> {
-//            override fun onResponse(
-//                call: Call<ListEventsResponse>,
-//                response: Response<ListEventsResponse>
-//            ) {
-//                showLoading(false)
-//                if (response.isSuccessful) {
-//                    val responseBody = response.body()
-//                    if (responseBody != null) {
-//                        setEventsData(responseBody.listEvents)
-////                        setEventsData(responseBody.restaurant.customerReviews)
-//                    }
-//                } else {
-//                    Log.e(TAG, "onFailure: ${response.message()}")
-//                }
-//            }
-//            override fun onFailure(call: Call<ListEventsResponse>, t: Throwable) {
-//                showLoading(false)
-//                Log.e(TAG, "onFailure: ${t.message}")
-//            }
-//        })
-//    }
-//    private fun setEventsData(listEvents: List<ListEventsItem>){
-//        val adapter = ListEventsAdapter()
-//        binding.rvHeroes.adapter = adapter
-//        adapter.submitList(listEvents)
-//    }
-//    private fun showLoading(isLoading: Boolean) {
-//        if (isLoading) {
-//            binding.progressBar.visibility = View.VISIBLE
-//        } else {
-//            binding.progressBar.visibility = View.GONE
-//        }
-//    }
 }

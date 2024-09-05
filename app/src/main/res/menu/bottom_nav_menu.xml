@@ -21,7 +21,7 @@
         android:title="@string/favorite"
         />
     <item
-        android:id="@+id/navigation_setting"
+        android:id="@+id/navigation_settings"
         android:icon="@drawable/baseline_settings_24"
         android:title="@string/settings"/>
 
