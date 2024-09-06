@@ -16,7 +16,7 @@
         android:title="@string/finished"
         />
     <item
-        android:id="@+id/navigation_favorit"
+        android:id="@+id/navigation_favorite"
         android:icon="@drawable/baseline_favorite_24"
         android:title="@string/favorite"
         />

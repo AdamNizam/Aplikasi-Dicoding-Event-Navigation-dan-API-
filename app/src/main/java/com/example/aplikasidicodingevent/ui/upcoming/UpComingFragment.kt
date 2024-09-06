@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplikasidicodingevent.R
+import com.example.aplikasidicodingevent.data.FavoriteEventDatabase
 import com.example.aplikasidicodingevent.data.response.ListEventsResponse
 import com.example.aplikasidicodingevent.data.retrofit.ApiConfig
 import com.example.aplikasidicodingevent.databinding.FragmentUpComingBinding
+import com.example.aplikasidicodingevent.repository.FavoriteEventRepository
 import com.example.aplikasidicodingevent.ui.adapter.ListEventsAdapter
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
@@ -22,6 +25,7 @@ class UpComingFragment : Fragment() {
     private var _binding: FragmentUpComingBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: ListEventsAdapter
+    private lateinit var upComingViewModel: UpComingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,

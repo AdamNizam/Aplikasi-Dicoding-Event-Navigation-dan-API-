@@ -10,8 +10,10 @@ import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.core.text.HtmlCompat
 import com.bumptech.glide.Glide
+import com.example.aplikasidicodingevent.data.FavoriteEvent
 import com.example.aplikasidicodingevent.databinding.ActivityDetailEventBinding
 import com.google.android.material.snackbar.Snackbar
+import com.example.aplikasidicodingevent.R
 
 class DetailEventActivity : AppCompatActivity() {
 
@@ -61,6 +63,28 @@ class DetailEventActivity : AppCompatActivity() {
                         Log.e("DetailEventActivity", "Link is empty")
                     }
                 }
+
+                viewModel.isFavorite(eventData.id.toString()).observe(this) { favoriteEvent ->
+                    if (favoriteEvent == null) {
+                        binding.ivBookmark.setImageResource(R.drawable.baseline_favorite_24)
+                    } else {
+                        binding.ivBookmark.setImageResource(R.drawable.baseline_favorite_border_24)
+                    }
+                }
+                // Handle bookmark button click
+                binding.ivBookmark.setOnClickListener {
+                    val favoriteEvent = eventData.name?.let { it1 ->
+                        FavoriteEvent(
+                            id = eventData.id.toString(),
+                            name = it1,
+                            mediaCover = eventData.mediaCover
+                        )
+                    }
+                    if (favoriteEvent != null) {
+                        viewModel.toggleFavorite(favoriteEvent)
+                    }
+                }
+
             } ?: run {
                 Log.e("DetailEventActivity", "Event data is null")
                 showError("Event details not found")
