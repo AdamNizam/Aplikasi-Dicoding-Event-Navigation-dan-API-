@@ -40,7 +40,7 @@ class DetailEventViewModel (application: Application) : AndroidViewModel(applica
                 favoriteEventDao.insertFavoriteEvent(event)
             } else {
                 // Delete event jika sudah ada
-                favoriteEventDao.deleteFavoriteEventById(event.toString())
+                favoriteEventDao.deleteFavoriteEventById(event.toString() )
             }
         }
     }

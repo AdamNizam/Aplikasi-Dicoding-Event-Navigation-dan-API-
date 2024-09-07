@@ -25,7 +25,6 @@ class UpComingFragment : Fragment() {
     private var _binding: FragmentUpComingBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: ListEventsAdapter
-    private lateinit var upComingViewModel: UpComingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,

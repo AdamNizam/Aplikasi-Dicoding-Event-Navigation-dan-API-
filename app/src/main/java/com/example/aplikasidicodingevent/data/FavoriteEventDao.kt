@@ -12,10 +12,15 @@ interface FavoriteEventDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertFavoriteEvent(favoriteEvent: FavoriteEvent)
 
+    @Query("SELECT * FROM favorite_event")
+    fun getFavoriteEvent(): LiveData<List<FavoriteEvent>>
+
     @Query("SELECT * FROM favorite_event WHERE id = :id")
     fun getFavoriteEventById(id: String): LiveData<FavoriteEvent?>
 
     @Query("DELETE FROM favorite_event WHERE id = :id")
     suspend fun deleteFavoriteEventById(id: String)
+
+
 
 }
