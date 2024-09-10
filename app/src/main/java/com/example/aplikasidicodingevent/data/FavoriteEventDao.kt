@@ -21,6 +21,4 @@ interface FavoriteEventDao {
     @Query("DELETE FROM favorite_event WHERE id = :id")
     suspend fun deleteFavoriteEventById(id: String)
 
-
-
 }

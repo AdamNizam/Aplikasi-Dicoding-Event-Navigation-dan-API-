@@ -15,4 +15,5 @@
     <string name="save_favorite">save favorite</string>
     <string name="register">Register</string>
     <string name="picture_thumbnil">Picture thumbnil</string>
+    <string name="dark_mode">dark_mode</string>
 </resources>

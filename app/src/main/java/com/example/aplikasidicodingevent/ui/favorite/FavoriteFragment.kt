@@ -20,7 +20,6 @@ class FavoriteFragment : Fragment() {
     private lateinit var viewModel: FavoriteEventViewModel
     private lateinit var adapter: ListEventsAdapter
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
